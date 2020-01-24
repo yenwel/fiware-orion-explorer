@@ -2,8 +2,7 @@ FROM php:latest
 
 RUN apt update && \
 apt install git gnupg -y && \
-curl -sL https://deb.nodesource.com/setup_9.x |  bash - && \
-apt install nodejs -y
+apt-get install -y nodejs npm
 
 RUN git clone https://github.com/VM9/fiware-orion-explorer 
 WORKDIR /fiware-orion-explorer 
